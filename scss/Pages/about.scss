@@ -1,0 +1,317 @@
+@import '../Base/base';
+
+@import '../Themes/variable';
+
+.header{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    .container{
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            margin: 0;
+        }
+        .menu{
+            margin-right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .navbar{
+                a{
+                    text-decoration: none;
+                    @include text($fz-text-sx, $fw-text-semiBold,  $c1-text);
+                    display: inline-block;
+                    padding: 5px 15px;
+                    margin-right: 25px;
+                    position: relative;
+                    &:hover{
+                        color: $c3-text;
+                        &::after{
+                            display: block;
+                            transform: scale(1.5, 1.5);
+                            transition:0.5s ease all;
+                        }
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        display: block;
+                        background-color: $c1-bg;
+                        border-radius: 50%;
+                        bottom: -20px;
+                        left: 50%;
+                        margin-left: -4px;
+                        display: none;
+                        transform: scale(1, 0);
+                        z-index: 5;
+                    }
+                }
+                
+            }
+            .btnHeader{
+                @include button($c1-bg, $c1-border solid 1px, 25px, $fz-text-sm, $fw-text-semiBold, $c2-text, 10px 20px, $c2-bg, $c3-text);
+                margin-right: 20px;
+                transition: all 0.3s linear;
+            }
+            .social-media{
+                a{
+                    color: $c1-text;
+                    i{
+                        font-size: $fz-text-sx;
+                        margin: 0 3px;
+                        &:hover{
+                            color: $c3-text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.carousel{
+    background: url(../../Images/yellow_top_wave_01.png);
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .container{
+        padding: 100px 40px 15px 40px;
+        .row{
+            .col-left{
+                .item{
+                    padding: 180px 5px;
+                    h3{
+                        @include text($fz-text-lg, $fw-text-semiBold, $c3-text);
+                    }
+                    h1{
+                        @include text($fz-text-4xl, $fw-text-semiBold, $c1-text);
+                    }
+                }
+            }
+        }
+    }
+    .bottom-cover-img{
+        img{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
+
+.our-teacher{
+    background-color: $c3-bg;
+    background-image: url(../../Images/Wave_White_bottom_right_shape_01.png);
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .container{
+        padding: 0 40px;
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .col{
+                width: 25%;
+                padding: 0;
+                margin: 20px;
+                .item{
+                    border-radius: 10px;
+                    &:hover{
+                        box-shadow: 0px 15px 10px 0px $c4-bg;
+                        transition: all 0.3s;
+                    }
+                    .top{
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            border-radius: 10px 10px 0 0;
+                            
+                            transform: scale(1, 1);
+                            &:hover{
+                                transform: scale(1.05, 1.05);
+                                transition: all 0.5s;
+                            }
+                        }
+                    }
+                    .bottom{
+                        background-color: $c2-bg;
+                        text-align: center;
+                        border-radius: 0 0 10px 10px;
+                        padding-bottom: 20px;
+                        span{
+                            @include text($fz-text-ssx, $fw-text-semiBold, $c3-text);
+                            display: inline-block;
+                            margin-top: 25px;
+                        }
+                        h5{
+                            font-weight: 600;
+                            margin-top: 10px;
+                        }
+                        p{
+                            font-size: $fz-text-sm;
+                            margin: 15px 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.register{
+    background-image: url(../../Images/accent_bottom_wave_01.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .container{
+        padding: 15px 40px;
+        .row{
+            padding-top: 80px;
+            .col{
+                width: 50%;
+                .item{
+                    img{
+                        width: 100%;
+                        margin: 25px 0 25px 30px;
+                    }
+                    form{
+                        background-color: $c2-bg;
+                        width: 75%;
+                        box-shadow: -5px 0px 10px 0px $c4-bg;
+                        border-radius: 10px;
+                        padding-bottom: 80px;
+                        .top{
+                            h1{
+                                text-align: center;
+                                font-weight: 600;
+                                padding-top: 30px;
+                            }
+                        }
+                        .boby{
+                            .row{
+                                padding-top: 50px;
+                                .btnName, .btnEmail{
+                                    border: solid 1px $c4-bg;
+                                    border-radius: 25px;
+                                    padding: 10px;
+                                    width: 37%;
+                                    input{
+                                        width: 70%;
+                                        border: none;
+                                        margin-left: 10px;
+                                        font-size: $fz-text-sx;
+                                    }
+                                }
+                                .btnName{
+                                    margin-left: 50px;
+                                }
+                                .btnEmail{
+                                    margin-right: 50px;
+                                }
+                                .btnDetail{
+                                    border: solid 1px $c4-bg;
+                                    border-radius: 25px;
+                                    padding: 10px;
+                                    width: 100%;
+                                    margin: 0 50px;
+                                    select, textarea{
+                                        width: 90%;
+                                        border: none;
+                                        margin-left: 10px;
+                                        font-size: $fz-text-sx;
+                                    }
+                                    .fa-message{
+                                        transform: translateY(-80px);
+                                    }
+                                }
+                            }
+                            i{
+                                color: $c3-text;
+                            }
+                        }
+                        .bottom{
+                            margin: 50px 50px 0 50px;
+                            button{
+                                @include button($c1-bg, $c1-border solid 1px, 25px, $fz-text-sm, $fw-text-semiBold, $c2-text, 10px 50px, $c2-bg, $c3-text);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    background-image: url(../../Images/footer_background.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $c5-bg;
+    .container{
+        padding: 15px 45px;
+        .row{
+            color: $c2-text;
+            padding-top: 100px;
+            padding-bottom: 110px;
+            .col{
+                .item{
+                    h4{
+                        color: $c2-text;
+                        font-weight: 600;
+                        margin-bottom: 30px;
+                    }
+                    .contact-row span{
+                        margin-left: 10px;
+                    }
+                    .social-media{
+                        margin-top: 30px;
+                        a{
+                            i{
+                                color: $c2-text;
+                                margin-right: 15px;
+                                &:hover{
+                                    color: $c1-text;
+                                }
+                            }
+                        }
+                    }
+                    ul{
+                        list-style: none;
+                            a{
+                                text-decoration: none;
+                                color: $c2-text;
+                                &:hover{
+                                    opacity: 0.7;
+                                }
+                            }
+                    }
+                    form{
+                        input{
+                            color: $c2-text;
+                            border-radius: 25px;
+                            border: solid 1px $c4-bg;
+                            font-size: $fz-text-sm;
+                            text-align: center;
+                            padding: 10px 30px;
+                            margin-bottom: 10px;
+                        }
+                        .btnSubmit{
+                            text-align: center;
+                            margin-bottom: 10px;
+                            @include button($c2-bg, $c2-border solid 1px, 25px, $fz-text-sx, $fw-text-semiBold, $c1-text, 10px 80px, $c5-bg, $c2-text);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
