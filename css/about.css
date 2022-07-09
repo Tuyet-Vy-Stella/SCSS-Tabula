@@ -24,6 +24,21 @@
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 992px) {
+  .header .container {
+    justify-content: flex-start;
+  }
+}
+.header .container .toggle {
+  font-size: 25px;
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .header .container .toggle {
+    display: inline-block;
+    margin: 0;
+  }
+}
 .header .container .logo {
   margin: 0;
 }
@@ -91,6 +106,11 @@
 .header .container .menu .social-media a i:hover {
   color: #b61984;
 }
+@media screen and (max-width: 992px) {
+  .header .container .menu {
+    display: none;
+  }
+}
 
 .carousel {
   background: url(../../Images/yellow_top_wave_01.png);
@@ -103,6 +123,14 @@
 }
 .carousel .container .row {
   align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .carousel .container .row {
+    display: block;
+  }
+}
+.carousel .container .row .col {
+  width: 50%;
 }
 .carousel .container .row .col .item {
   padding: 30px 5px;
@@ -126,6 +154,11 @@
           animation: fadeInRight 1s;
   width: 100%;
 }
+@media screen and (max-width: 992px) {
+  .carousel .container .row .col {
+    width: 100%;
+  }
+}
 .carousel .bottom-cover-img img {
   position: absolute;
   bottom: 0;
@@ -143,9 +176,9 @@
   padding: 0 40px;
 }
 .our-teacher .container .row {
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .our-teacher .container .row .col {
   width: 25%;
@@ -233,6 +266,11 @@
   font-size: 15px;
   margin: 15px 20px;
 }
+@media screen and (max-width: 992px) {
+  .our-teacher .container .row .col {
+    width: 50%;
+  }
+}
 
 .register {
   background-image: url(../../Images/accent_bottom_wave_01.png);
@@ -245,6 +283,12 @@
 }
 .register .container .row {
   padding-top: 80px;
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .register .container .row {
+    display: block;
+  }
 }
 .register .container .row .col {
   width: 50%;
@@ -269,41 +313,47 @@
   font-weight: 600;
   padding-top: 30px;
 }
-.register .container .row .col .item form .boby .row {
-  padding-top: 50px;
+.register .container .row .col .item form .boby {
+  margin-top: 40px;
 }
-.register .container .row .col .item form .boby .row .btnName, .register .container .row .col .item form .boby .row .btnEmail {
+.register .container .row .col .item form .boby .row-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+.register .container .row .col .item form .boby .row-input .btnName, .register .container .row .col .item form .boby .row-input .btnEmail {
   border: solid 1px #abb8c3;
   border-radius: 25px;
   padding: 10px;
   width: 37%;
 }
-.register .container .row .col .item form .boby .row .btnName input, .register .container .row .col .item form .boby .row .btnEmail input {
+.register .container .row .col .item form .boby .row-input .btnName input, .register .container .row .col .item form .boby .row-input .btnEmail input {
   width: 70%;
   border: none;
   margin-left: 10px;
   font-size: 13px;
 }
-.register .container .row .col .item form .boby .row .btnName {
+.register .container .row .col .item form .boby .row-input .btnName {
   margin-left: 50px;
 }
-.register .container .row .col .item form .boby .row .btnEmail {
+.register .container .row .col .item form .boby .row-input .btnEmail {
   margin-right: 50px;
 }
-.register .container .row .col .item form .boby .row .btnDetail {
+.register .container .row .col .item form .boby .row-input .btnDetail {
   border: solid 1px #abb8c3;
   border-radius: 25px;
   padding: 10px;
   width: 100%;
   margin: 0 50px;
 }
-.register .container .row .col .item form .boby .row .btnDetail select, .register .container .row .col .item form .boby .row .btnDetail textarea {
+.register .container .row .col .item form .boby .row-input .btnDetail select, .register .container .row .col .item form .boby .row-input .btnDetail textarea {
   width: 90%;
   border: none;
-  margin-left: 10px;
   font-size: 13px;
 }
-.register .container .row .col .item form .boby .row .btnDetail .fa-message {
+.register .container .row .col .item form .boby .row-input .btnDetail select {
+  display: inline-block;
+}
+.register .container .row .col .item form .boby .row-input .btnDetail .fa-message {
   transform: translateY(-80px);
 }
 .register .container .row .col .item form .boby i {
@@ -325,6 +375,21 @@
   background-color: #fff;
   color: #b61984;
 }
+@media screen and (max-width: 992px) {
+  .register .container .row .col .item form .bottom button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .register .container .row .col .item form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .register .container .row .col {
+    width: 100%;
+  }
+}
 
 .footer {
   background-image: url(../../Images/footer_background.jpg);
@@ -340,6 +405,9 @@
   color: #fff;
   padding-top: 100px;
   padding-bottom: 110px;
+}
+.footer .container .row .col {
+  width: 25%;
 }
 .footer .container .row .col .item-0 {
   -webkit-animation-name: fadeInLeft;
@@ -432,6 +500,17 @@
 .footer .container .row .col .item form .btnSubmit:hover {
   background-color: #aa017e;
   color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .footer .container .row .col .item {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .footer .container .row .col {
+    flex-basis: auto;
+    width: 50%;
+  }
 }
 
 @-webkit-keyframes fadeInLeft {

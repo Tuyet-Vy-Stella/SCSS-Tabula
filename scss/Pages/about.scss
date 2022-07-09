@@ -13,6 +13,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 992px) {
+            justify-content: flex-start;
+        }
+        .toggle{
+            font-size: $fz-text-3xl;
+            display: none;
+            @media screen and (max-width: 992px) {
+                display: inline-block;
+                margin: 0;
+            }
+        }
         .logo{
             margin: 0;
         }
@@ -53,7 +64,6 @@
                         z-index: 5;
                     }
                 }
-                
             }
             .btnHeader{
                 @include button($c1-bg, $c1-border solid 1px, 25px, $fz-text-sm, $fw-text-semiBold, $c2-text, 10px 20px, $c2-bg, $c3-text);
@@ -72,6 +82,9 @@
                     }
                 }
             }
+            @media screen and (max-width: 992px) {
+                display: none;
+            }
         }
     }
 }
@@ -85,7 +98,11 @@
         padding: 100px 40px 15px 40px;
         .row{
             align-items: center;
+            @media screen and (max-width: 992px) {
+                display: block;
+            }
             .col{
+                width: 50%;
                 .item{
                     padding: 30px 5px;
                     .text{
@@ -101,6 +118,9 @@
                         animation:fadeInRight 1s;
                         width: 100%;
                     }
+                }
+                @media screen and (max-width: 992px) {
+                    width: 100%;
                 }
             }
         }
@@ -123,9 +143,9 @@
     .container{
         padding: 0 40px;
         .row{
-            display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             .col{
                 width: 25%;
                 padding: 0;
@@ -176,6 +196,9 @@
                         }
                     }
                 }
+                @media screen and (max-width: 992px) {
+                    width: 50%;
+                }
             }
         }
     }
@@ -190,6 +213,10 @@
         padding: 15px 40px;
         .row{
             padding-top: 80px;
+            align-items: center;
+            @media screen and (max-width: 992px) {
+                display: block;
+            }
             .col{
                 width: 50%;
                 .item{
@@ -213,8 +240,10 @@
                             }
                         }
                         .boby{
-                            .row{
-                                padding-top: 50px;
+                            margin-top: 40px;
+                            .row-input{
+                                display: flex;
+                                margin-bottom: 15px;
                                 .btnName, .btnEmail{
                                     border: solid 1px $c4-bg;
                                     border-radius: 25px;
@@ -242,8 +271,10 @@
                                     select, textarea{
                                         width: 90%;
                                         border: none;
-                                        margin-left: 10px;
                                         font-size: $fz-text-sx;
+                                    }
+                                    select{
+                                        display: inline-block;
                                     }
                                     .fa-message{
                                         transform: translateY(-80px);
@@ -258,9 +289,18 @@
                             margin: 50px 50px 0 50px;
                             button{
                                 @include button($c1-bg, $c1-border solid 1px, 25px, $fz-text-sm, $fw-text-semiBold, $c2-text, 10px 50px, $c2-bg, $c3-text);
+                                @media screen and (max-width: 992px) {
+                                    width: 100%;
+                                }
                             }
                         }
+                        @media screen and (max-width: 992px) {
+                            width: 100%;
+                        }
                     }
+                }
+                @media screen and (max-width: 992px) {
+                    width: 100%;
                 }
             }
         }
@@ -280,6 +320,7 @@
             padding-top: 100px;
             padding-bottom: 110px;
             .col{
+                width: 25%;
                 @for $i from 0 to 5 {
                     .item-#{$i}{
                         animation-name: fadeInLeft;
@@ -334,6 +375,13 @@
                             @include button($c2-bg, $c2-border solid 1px, 25px, $fz-text-sx, $fw-text-semiBold, $c1-text, 10px 80px, $c5-bg, $c2-text);
                         }
                     }
+                    @media screen and (max-width: 992px) {
+                        font-size: $fz-text-sm;
+                    }
+                }
+                @media screen and (max-width: 992px) {
+                    flex-basis: auto;
+                    width: 50%;
                 }
             }
         }
