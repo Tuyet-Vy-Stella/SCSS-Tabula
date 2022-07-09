@@ -152,6 +152,46 @@
   padding: 0;
   margin: 20px;
 }
+.our-teacher .container .row .col .item-0 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.our-teacher .container .row .col .item-1 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.our-teacher .container .row .col .item-2 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.our-teacher .container .row .col .item-3 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.our-teacher .container .row .col .item-4 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
 .our-teacher .container .row .col .item {
   border-radius: 10px;
 }
@@ -161,6 +201,7 @@
 }
 .our-teacher .container .row .col .item .top {
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 .our-teacher .container .row .col .item .top img {
   width: 100%;
@@ -170,7 +211,6 @@
 .our-teacher .container .row .col .item .top img:hover {
   transform: scale(1.05, 1.05);
   transition: all 0.5s;
-  border-radius: 10px 10px 0 0;
 }
 .our-teacher .container .row .col .item .bottom {
   background-color: #fff;
@@ -191,7 +231,7 @@
 }
 .our-teacher .container .row .col .item .bottom p {
   font-size: 15px;
-  margin: 15px 25px;
+  margin: 15px 20px;
 }
 
 .register {
@@ -210,6 +250,8 @@
   width: 50%;
 }
 .register .container .row .col .item img {
+  -webkit-animation: fadeInLeft 1s;
+          animation: fadeInLeft 1s;
   width: 100%;
   margin: 25px 0 25px 30px;
 }
@@ -219,6 +261,8 @@
   box-shadow: -5px 0px 10px 0px #abb8c3;
   border-radius: 10px;
   padding-bottom: 80px;
+  -webkit-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
 }
 .register .container .row .col .item form .top h1 {
   text-align: center;
@@ -297,6 +341,46 @@
   padding-top: 100px;
   padding-bottom: 110px;
 }
+.footer .container .row .col .item-0 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.footer .container .row .col .item-1 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.footer .container .row .col .item-2 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.footer .container .row .col .item-3 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.footer .container .row .col .item-4 {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
 .footer .container .row .col .item h4 {
   color: #fff;
   font-weight: 600;
@@ -353,33 +437,41 @@
 @-webkit-keyframes fadeInLeft {
   0% {
     transform: translateX(-50px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes fadeInLeft {
   0% {
     transform: translateX(-50px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @-webkit-keyframes fadeInRight {
   0% {
     transform: translateX(50px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes fadeInRight {
   0% {
     transform: translateX(50px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
